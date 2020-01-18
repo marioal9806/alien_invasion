@@ -35,11 +35,11 @@ class AlienInvasion:
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
-            self.screen.fill(self.settings.bg_color)
-            self.ship.blitme()
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
 
-            # Make the most recently drawn screen visible.
-            pygame.display.flip()
+        # Make the most recently drawn screen visible.
+        pygame.display.flip()
 
 
 if __name__ == '__main__':
