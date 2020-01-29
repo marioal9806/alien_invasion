@@ -90,6 +90,7 @@ class AlienInvasion:
             self.stats.reset_stats()
             self.stats.game_active = True
             self.sb.prep_score()
+            self.sb.prep_level()
 
             # Get rid of any remaining aliens and bullets.
             self.aliens.empty()
@@ -178,6 +179,12 @@ class AlienInvasion:
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
+            
+            # Increase level.
+            self.stats.level += 1
+            self.sb.prep_level()
+
+
 
     def _check_aliens_bottom(self):
         """Check if any aliens have reached the bottom of the screen."""
@@ -229,10 +236,11 @@ class AlienInvasion:
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
-        self.aliens.draw(self.screen)
-
+        
         # Draw the score information.
         self.sb.show_score()
+
+        self.aliens.draw(self.screen)
 
         # Draw the play button if the game is inactive.
         if not self.stats.game_active:
