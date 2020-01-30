@@ -27,6 +27,9 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
 
+        # Initializes the pygame mixer audio
+        self._init_audio()
+
         # Create an instance to store game statistics,
         #   and create a scoreboard.
         self.stats = GameStats(self)
@@ -52,6 +55,16 @@ class AlienInvasion:
                 self._update_aliens()
             
             self._update_screen()
+
+    def _init_audio(self):
+        pygame.mixer.init()
+        pygame.mixer.music.load('sounds/Trickshot.ogg')
+        pygame.mixer.music.play(loops=-1)
+        # print(pygame.mixer.music.get_volume())
+        pygame.mixer.music.set_volume(0.5)
+
+        self.laser = pygame.mixer.Sound('sounds/laser.wav')
+        self.explode = pygame.mixer.Sound('sounds/explode.wav')
 
     def _write_high_score(self):
         with open('high_score.txt','w') as f:
@@ -116,6 +129,8 @@ class AlienInvasion:
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
+            if self.stats.game_active:
+                pygame.mixer.Sound.play(self.laser)
 
     def _create_fleet(self):
         """Create the fleet of aliens."""
@@ -177,6 +192,7 @@ class AlienInvasion:
             self.bullets, self.aliens, True, True)
 
         if collisions:
+            pygame.mixer.Sound.play(self.explode)
             for aliens in collisions.values():
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
