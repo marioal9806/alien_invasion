@@ -21,11 +21,13 @@ class AlienInvasion:
         self.settings = Settings()
 
         self.icon = pygame.image.load('images/icon.bmp')
+        self.background = pygame.image.load('images/background.bmp')
         pygame.display.set_icon(self.icon)
 
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
+        self.screen_rect = self.screen.get_rect()
 
         # Initializes the pygame mixer audio
         self._init_audio()
@@ -155,7 +157,7 @@ class AlienInvasion:
     def _create_alien(self, alien_number, row_number):
         """Create an alien and place it in the row."""
         alien = Alien(self)
-        alien_width, alien_height = alien.rect.size
+        alien_width = alien.rect.width
         alien.x = alien_width + 2 * alien_width * alien_number
         alien.rect.x = alien.x
         alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
@@ -258,7 +260,7 @@ class AlienInvasion:
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
-        self.screen.fill(self.settings.bg_color)
+        self.screen.blit(self.background, self.screen_rect)
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
