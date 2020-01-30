@@ -1,3 +1,5 @@
+import os
+
 class GameStats:
     """Tracks statistics for Alien Invasion."""
 

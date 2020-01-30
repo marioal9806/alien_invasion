@@ -1,3 +1,4 @@
+import os
 import pygame.font
 from pygame.sprite import Group
 
@@ -16,7 +17,7 @@ class Scoreboard:
 
         # Font settings for scoring information.
         self.text_color = (30, 30, 30)
-        self.font = pygame.font.SysFont(None, 36)
+        self.font = pygame.font.Font(os.path.join('data','FreeSansBold.ttf'),       36)
 
         self.prep_images()
     

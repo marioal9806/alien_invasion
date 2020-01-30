@@ -1,4 +1,5 @@
 import sys
+import os
 from time import sleep
 
 import pygame
@@ -20,8 +21,8 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
 
-        self.icon = pygame.image.load('images/icon.bmp')
-        self.background = pygame.image.load('images/background.bmp')
+        self.icon = pygame.image.load(os.path.join('images','icon.bmp'))
+        self.background = pygame.image.load(os.path.join('images',                  'background.bmp'))
         pygame.display.set_icon(self.icon)
 
         self.screen = pygame.display.set_mode(
@@ -60,13 +61,13 @@ class AlienInvasion:
 
     def _init_audio(self):
         pygame.mixer.init()
-        pygame.mixer.music.load('sounds/Trickshot.ogg')
+        pygame.mixer.music.load(os.path.join('sounds','Trickshot.ogg'))
         pygame.mixer.music.play(loops=-1)
         # print(pygame.mixer.music.get_volume())
         pygame.mixer.music.set_volume(0.5)
 
-        self.laser = pygame.mixer.Sound('sounds/laser.wav')
-        self.explode = pygame.mixer.Sound('sounds/explode.wav')
+        self.laser = pygame.mixer.Sound(os.path.join('sounds','laser.wav'))
+        self.explode = pygame.mixer.Sound(os.path.join('sounds','explode.wav'))
 
     def _write_high_score(self):
         with open('high_score.txt','w') as f:

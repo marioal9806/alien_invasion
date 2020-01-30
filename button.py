@@ -1,4 +1,5 @@
 # Lets pygame render text to the screen.
+import os
 import pygame.font
 
 class Button:
@@ -13,7 +14,7 @@ class Button:
         self.button_color = (0, 255, 0)
         self.text_color = (255, 255, 255)
         # None -> default font, 48 -> font size
-        self.font = pygame.font.SysFont(None, 48)
+        self.font = pygame.font.Font(os.path.join('data','FreeSansBold.ttf'),       36)
 
         # Build the button's rect object and center it.
         self.rect = pygame.Rect(0, 0, self.width, self.height)
