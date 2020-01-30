@@ -280,6 +280,8 @@ class AlienInvasion:
 
 
 if __name__ == '__main__':
+    if getattr(sys, 'frozen', False):
+        os.chdir(sys._MEIPASS)
     # Make a game instance, and run the game.
     ai = AlienInvasion()
     ai.run_game()
