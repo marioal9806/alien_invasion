@@ -55,8 +55,9 @@ You have only three extra spaceships, and you can only shoot three lasers at a t
 ---
 ### Development:
 The Alien Invasion game is an ongoing project. Ideas for further development include:
-- [ ] Add a pause event to freeze screen.
+- [ ] Add a pause button.
 - [ ] Add a main screen for the game before it starts.
+- [ ] Add options to change the settings.
 - [ ] Modify settings of PyInstaller .spec file to save High-Scores in the single file distribution.
 
 If you wish to edit the game it's as simple as cloning this repo. Feel free to add as many features as you like!
