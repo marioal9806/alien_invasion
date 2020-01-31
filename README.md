@@ -1,7 +1,7 @@
 # Alien Invasion Game!
 
 ### Description:
-Alien Invasion is a videogame for Windows based on the classic arcade *Space Invaders*. 
+Alien Invasion is a videogame for Windows 10, based on the classic arcade *Space Invaders*. 
 Save the Planet Earth as you fight against an endless fleet of aliens with an ever increasing dificulty! 
 Enjoy the spacial adventure through colorful and animated graphics, 8-bit sound FX and the techno soundtrack of the game: "Trickshot" (by [PEX](https://soundcloud.com/user-853103120/trickshot)).
 
@@ -17,16 +17,16 @@ The app is developed on Python 3.7 using the modules Pygame and PyInstaller.
 - [License](https://github.com/marioal9806/alien_invasion/new/master?readme=1#license)
 
 ---
-### Installation:
+### Installation (**Windows 10 only**):
 The game package is built using the PyInstaller module, this allows users to have a self-contained executable game. Easy to use, easy to distribute!
 Currently the two available **distribution bundles** are the following:
 #### Single File Executable:
-  Inside the repository of the project, go to the following directory: `single_file/dist` and download the executable file. 
+  Inside the repository of the project, go to the following directory: `single_file/dist` and download the executable file, or click [here](https://github.com/marioal9806/alien_invasion/blob/master/single_file/dist/alien_invasion.exe?raw=true). 
   Once you have it on your computer, just double click it!
   
   
 #### Single Folder Distribution:
-  Inside the repository of the project, go to the following directory: `single_folder/dist` and download the directory called *alien_invasion*. 
+  Inside the repository of the project, go to the following directory: `single_folder/dist` and download the zip file containing the required directory called *alien_invasion*, or click [here](https://github.com/marioal9806/alien_invasion/blob/master/single_folder/dist/alien_invasion.zip?raw=true). 
   Once you have it on your computer, find the *alien_invasion.exe* file and double click it!
   
 ---
