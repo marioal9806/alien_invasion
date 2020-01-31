@@ -73,7 +73,7 @@ For more info, visit the [PyInstaller Manual](https://pyinstaller.readthedocs.io
 Furthermore, the `requirements.txt` file shows the pip packages installed in the virtual environment of the project (using venv).
 
 ---
-### Credits:
-
----
 ### License:
+
+MIT License
+Copyright (c) 2020 Mario Ortega
