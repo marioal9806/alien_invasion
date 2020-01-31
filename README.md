@@ -35,7 +35,11 @@ Currently the two available **distribution bundles** are the following:
 Once you open the game window, just press the Play button at the center of the screen to start playing. 
 The status bar shows your ships left, the highest score saved, the current score and the current level.
 
+![Initial screen](https://media.giphy.com/media/UQsZsbASYHjCzE00au/giphy.gif)
 
+![New level](https://media.giphy.com/media/ej0i3n7Ia4y4paXdSa/giphy.gif)
+
+![Life lost](https://media.giphy.com/media/RNWCUohdZriXJH9Ami/giphy.gif)
 
 The gameplay dynamics are very simple. Move your ship left or right to point and shoot to the alien ships to earn points. 
 The score per each alien ship increments as you progress through the game.
